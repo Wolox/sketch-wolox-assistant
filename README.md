@@ -1,1 +1,1 @@
-# sketch-wolox-assistant-react
+# sketch-wolox-assistant
