@@ -1,17 +1,17 @@
 {
-  "name": "sketch-assistant-template",
-  "homepage": "https://github.com/sketch-hq/sketch-assistant-template",
-  "version": "1.0.0",
+  "name": "sketch-wolox-assistant",
+  "homepage": "https://github.com/Wolox/sketch-wolox-assistant",
+  "version": "0.0.1",
   "main": "dist/index.js",
   "sketch": "dist/sketch.js",
   "license": "MIT",
   "sketch-assistant": {
-    "title": "Sketch Assistant Template",
-    "description": "Template repository for a starter Assistant project",
+    "title": "Sketch Wolox Assistant",
+    "description": "Sketch Assistant fot Wolox design standards",
     "icon": ""
   },
   "author": {
-    "name": "Your Name or Company Name"
+    "name": "Martín Callegari"
   },
   "keywords": [
     "sketch",
@@ -25,7 +25,7 @@
     "dist"
   ],
   "scripts": {
-    "test": "jest --no-cache",
+    "test": "jest --verbose --no-cache",
     "build": "rm -rf dist && npm run build:node && npm run build:sketch",
     "build:node": "tsc",
     "build:sketch": "webpack",

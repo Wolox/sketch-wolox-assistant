@@ -1,24 +1,20 @@
-import { AssistantPackage, RuleDefinition } from '@sketch-hq/sketch-assistant-types'
+import { AssistantPackage } from '@sketch-hq/sketch-assistant-types'
 
-const helloWorld: RuleDefinition = {
-  rule: async (context) => {
-    context.utils.report('Hello world')
-  },
-  name: 'sketch-assistant-template/hello-world',
-  title: 'Hello World',
-  description: 'Reports a hello world message',
-}
+import { textStyle, textStyleOnAllTexts } from './rules/textStyles'
+import noLoremIpsum from './rules/loremIpsum'
 
-const assistant: AssistantPackage = async () => {
+const woloxAssistant: AssistantPackage = async () => {
   return {
-    name: 'sketch-assistant-template',
-    rules: [helloWorld],
+    name: 'sketch-wolox-assistant',
+    rules: [textStyle, noLoremIpsum, textStyleOnAllTexts],
     config: {
       rules: {
-        'sketch-assistant-template/hello-world': { active: true },
+        'sketch-wolox-assistant/text-style': { active: true },
+        'sketch-wolox-assistant/text-style-all-texts': { active: true },
+        'sketch-wolox-assistant/lorem-ipsum': { active: true, severity: 2 }
       },
     },
   }
 }
 
-export default assistant
+export default woloxAssistant
